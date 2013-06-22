@@ -1,0 +1,12 @@
+#Config file
+include/config/config.php
+
+# Eclipse project files
+.classpath
+.project
+.settings
+.buildpath
+.idea
+
+#GEdit temp files
+*~
