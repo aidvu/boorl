@@ -1,41 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-		<meta charset="utf-8">
-		<title>BooRL, The URL Shortener</title>
-		<meta name="description" content="URL Shortening service">
-		<meta name="author" content="Andrija Vucinic">
-		<link rel="stylesheet" href="style.css">
-		<link rel="shortcut icon" href="images/favicon.ico" />
-	<?php
-	if (strlen(GA_CODE) > 0) { 
-	?>
-	<script type="text/javascript">
-	
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', '<?php echo GA_CODE;?>']);
-	  <?php echo (strlen(DOMAIN) > 0 ? "_gaq.push(['_setDomainName', '" . DOMAIN . "']);" : ""); ?>
-	  
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	
-	</script>
-	<?php
-	} 
-	?>
-	</head>
-	<body>
-		<div class="container center">
-			<div class="header">
-				<div class="center">
-					<a href="http://<?php echo $_SERVER['HTTP_HOST']?>">
-						<img class="logo" src="images/logo.png" alt="Logo" />
-					</a>
-				</div>
-			</div>
-			<div class="center headerShadow"></div>
+<?php
+
+$smarty = new BooSmarty();
+
+$smarty->assign('link', $_SERVER['HTTP_HOST']);
+$smarty->assign('domain', DOMAIN);
+$smarty->assign('gaCode', GA_CODE);
+
+$smarty->display('include/view/tpl/header.tpl');

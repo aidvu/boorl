@@ -45,5 +45,3 @@ Class Statistics {
 		return $this->key;
 	}
 }
-
-?>

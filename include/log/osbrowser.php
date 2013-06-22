@@ -1,5 +1,4 @@
 <?php
-
 	/**
 	 * Class for parsing HTTP_USER_AGENT to get the Operating System and Browser name
 	 * 
@@ -13,29 +12,29 @@
 		private $HTTP_USER_AGENT;
 		// List of Operating Systems we want to detect, else return 'Other'
 		private $os = array(
-							// Mobile OS
-							array('search' => 'android', 'return' => 'Android'),
-							array('search' => 'blackberry', 'return' => 'BlackBerry'),
-							array('search' => 'ipad', 'return' => 'iPad'),
-							array('search' => 'iphone', 'return' => 'iPhone'),
-							array('search' => 'palm', 'return' => 'PalmOS'),
-							array('search' => 'symbian', 'return' => 'Symbian'),
-							// Desktop OS
-							array('search' => 'linux', 'return' => 'Linux'),
-							array('search' => 'macintosh', 'return' => 'Mac OS'),
-							array('search' => 'mac', 'return' => 'Mac OS'),
-							array('search' => 'unix', 'return' => 'Unix'),
-							array('search' => 'windows', 'return' => 'Windows'),
-							array('search' => 'win', 'return' => 'Windows')
-							);
+			// Mobile OS
+			array('search' => 'android', 'return' => 'Android'),
+			array('search' => 'blackberry', 'return' => 'BlackBerry'),
+			array('search' => 'ipad', 'return' => 'iPad'),
+			array('search' => 'iphone', 'return' => 'iPhone'),
+			array('search' => 'palm', 'return' => 'PalmOS'),
+			array('search' => 'symbian', 'return' => 'Symbian'),
+			// Desktop OS
+			array('search' => 'linux', 'return' => 'Linux'),
+			array('search' => 'macintosh', 'return' => 'Mac OS'),
+			array('search' => 'mac', 'return' => 'Mac OS'),
+			array('search' => 'unix', 'return' => 'Unix'),
+			array('search' => 'windows', 'return' => 'Windows'),
+			array('search' => 'win', 'return' => 'Windows')
+		);
 		private $browser = array(
-							array('search' => 'chrome', 'return' => 'Chrome'),
-							array('search' => 'firefox', 'return' => 'Firefox'),
-							array('search' => 'msie', 'return' => 'Internet Explorer'),
-							array('search' => 'mobile', 'return' => 'Mobile'),
-							array('search' => 'opera', 'return' => 'Opera'),
-							array('search' => 'Safari', 'return' => 'Safari')
-							);
+			array('search' => 'chrome', 'return' => 'Chrome'),
+			array('search' => 'firefox', 'return' => 'Firefox'),
+			array('search' => 'msie', 'return' => 'Internet Explorer'),
+			array('search' => 'mobile', 'return' => 'Mobile'),
+			array('search' => 'opera', 'return' => 'Opera'),
+			array('search' => 'Safari', 'return' => 'Safari')
+		);
 							
 		public function __construct() {
 			// Set the HTTP_USER_AGENT
@@ -86,6 +85,5 @@
 			}
 			return $this->default;
 		}
-	}
-	
+	}	
 ?>

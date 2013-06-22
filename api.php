@@ -10,7 +10,6 @@ include_once("include/shortener/shortener.php");
 $shortener = new Shortener();
 
 try {
-
 	$url = urldecode($_REQUEST['url']);
 
 	if (strlen($url) > 0) {
@@ -26,5 +25,3 @@ try {
 } catch (Exception $e) {
 	echo "Error! " . $e->getMessage();
 }
-
-?>

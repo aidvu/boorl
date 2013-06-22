@@ -18,4 +18,3 @@
 	}
 	
 	include('include/view/footer.php');
-?>

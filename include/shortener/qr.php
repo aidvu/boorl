@@ -26,5 +26,3 @@ class QR {
 		return $link;
 	}
 }
-
-?>

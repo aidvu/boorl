@@ -24,4 +24,3 @@
 	} catch (Exception $e) {
 		include_once('where.php');
 	}
-?>

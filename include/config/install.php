@@ -1,7 +1,6 @@
 <?php
 
 if (INSTALL != 1) {
-	
 	$apache_modules = apache_get_modules();
 	$php_modules = get_loaded_extensions();
 	$flag = true;

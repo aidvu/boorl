@@ -1,6 +1,5 @@
+<?php
 
-		</div>
-		<div class="center footerShadow"></div>
-		<div class="footer"></div>
-	</body>
-</html>
+$smarty = new BooSmarty();
+
+$smarty->display('include/view/tpl/footer.tpl');

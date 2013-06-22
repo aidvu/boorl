@@ -1,16 +1,20 @@
 <?php
 
 // Configurations
-include_once('include/config/config.php');
+require_once('include/config/config.php');
+
+// Configurations
+require_once('include/view/BooSmarty.php');
+
 if (INSTALL != 1) {
-        include_once('include/config/install.php');
-        exit();
+	include_once('include/config/install.php');
+	exit();
 }
 
 // Database Singleton
-include_once("include/config/database.php");
+require_once("include/config/database.php");
 // URL Shortener Class
-include_once("include/shortener/shortener.php");
+require_once("include/shortener/shortener.php");
 // Instantiate Shortener
 $shortener = new Shortener();
 
@@ -42,6 +46,4 @@ try {
 	include('include/view/form.php');
 }
 
-	include('include/view/footer.php');
-
-?>
+include('include/view/footer.php');
