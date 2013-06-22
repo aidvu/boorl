@@ -119,7 +119,4 @@ class Shortener {
 
 		return $short;
 	}
-
 }
-
-?>
