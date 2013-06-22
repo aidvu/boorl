@@ -1,14 +1,4 @@
 <?php
-
-	// Configurations
-	include_once('include/config/config.php');
-	// URL Shortener Class
-	include_once("include/shortener/shortener.php");
-	// Database Singleton
-	include_once("include/config/database.php");
-	// Log Class
-	include_once("include/log/log.php");
-	
 	try {
 		$key = $_GET['key'];
 		// Instantiate Shortener
