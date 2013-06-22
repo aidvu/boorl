@@ -1,7 +1,7 @@
 <?php
 
 // Class for getting OS and Browser
-include('osbrowser.php');
+include('OSBrowser.php');
 // Class for getting country based on IP
 include('include/GeoIP/geoip.inc');
 

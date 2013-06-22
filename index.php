@@ -6,8 +6,8 @@ require_once('include/config/config.php');
 require_once('include/view/BooSmarty.php');
 
 if (INSTALL != 1) {
-	include_once('include/config/install.php');
-	exit();
+    include_once('include/config/install.php');
+    exit();
 }
 
 // Database Singleton
@@ -15,9 +15,9 @@ require_once("include/config/database.php");
 // URL Shortener Class
 require_once("include/shortener/shortener.php");
 // Model for holding statistics
-require_once('include/model/Statistics.php');
+require_once('include/Helpers/Statistics.php');
 // Log Class
-require_once("include/log/log.php");
+require_once("include/Helpers/Log.php");
 
 // Pick the action, if not fall to default
 $action = !empty($_REQUEST['action']) ? $_REQUEST['action'] : 'shorten';
@@ -26,7 +26,7 @@ $action = !empty($_REQUEST['action']) ? $_REQUEST['action'] : 'shorten';
 include('include/view/header.php');
 
 // Do the action
-include($action . '.php');
+include('include/action/' . $action . '.php');
 
 // The footer
 include('include/view/footer.php');
