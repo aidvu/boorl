@@ -1,6 +1,7 @@
 <?php
 
 $smarty = new BooSmarty();
+$smarty->caching = true;
 
 $smarty->assign('link', $_SERVER['HTTP_HOST']);
 $smarty->assign('domain', DOMAIN);
