@@ -25,4 +25,11 @@ try {
     $submitted = false;
 }
 
-include('include/view/form.php');
+
+$smarty = new BooSmarty();
+
+$smarty->assign('submitted', $submitted);
+$smarty->assign('shortCodeURL', !empty($shortCodeURL) ? $shortCodeURL : '');
+$smarty->assign('url', !empty($url) ? $url : '');
+
+$smarty->display('include/view/tpl/shorten.tpl');
