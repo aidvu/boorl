@@ -1,7 +1,7 @@
 <?php
 
 // Number converter
-include_once('converter.php');
+include_once('NumberConverter.php');
 
 /**
  * URL Shortener class

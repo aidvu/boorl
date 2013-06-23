@@ -11,9 +11,9 @@ if (INSTALL != 1) {
 }
 
 // Database Singleton
-require_once("include/config/database.php");
+require_once("include/config/Database.php");
 // URL Shortener Class
-require_once("include/shortener/shortener.php");
+require_once("include/shortener/Shortener.php");
 // Model for holding statistics
 require_once('include/Helpers/Statistics.php');
 // Log Class

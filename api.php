@@ -3,9 +3,9 @@
 // Configurations
 include_once('include/config/config.php');
 // Database Singleton
-include_once("include/config/database.php");
+include_once("include/config/Database.php");
 // URL Shortener Class
-include_once("include/shortener/shortener.php");
+include_once("include/shortener/Shortener.php");
 
 try {
     if (!empty($_REQUEST['url'])) {
