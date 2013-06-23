@@ -1,5 +1,4 @@
 <?php
-
 try {
     $key = $_GET['key'];
     // Instantiate Shortener
