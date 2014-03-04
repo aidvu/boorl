@@ -18,7 +18,7 @@
                     <input class="submit" type="submit" value=""/>
                 </div>
                 <div class="formElement searchShort">
-                    <input class="url" type="text" name="short" id="short" value="" readonly/>
+                    <input class="url" type="text" id="short" value="" readonly/>
                 </div>
             </div>
         </div>
