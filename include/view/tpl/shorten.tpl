@@ -15,7 +15,7 @@
                     <input class="url" type="text" name="url" id="url" value="{$url}" />
                 </div>
                 <div class="formElement">
-                    <input class="submit" type="submit" value=""/>
+                    <input class="submit" type="submit" id="submit" value=""/>
                 </div>
                 <div class="formElement searchShort">
                     <input class="url" type="text" id="short" value="" readonly/>
@@ -44,3 +44,11 @@
         {/if}
     </form>
 </div>
+<script>
+    var submitButton = document.getElementById('submit');
+
+    addListener(submitButton, 'click', function() {
+        var url = document.getElementById('url');
+        _gaq.push(['_trackEvent', 'Button', 'Shorten', url.value]);
+    });
+</script>
